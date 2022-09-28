@@ -6,6 +6,12 @@ const Items = ({isItem, history, handleDelete}) => {
   const onCopy = useCallback(() => {
     setCopied(true);
   }, [])
+  const clicked = (e)=>{
+    const target = e.target;
+    target.classList.remove('bg-cyan');
+    target.classList.add('bg-dark-violet');
+    target.innerHTML = 'Copied!'
+  }
   return (
     <>
       {isItem && (
@@ -22,8 +28,9 @@ const Items = ({isItem, history, handleDelete}) => {
               <p className='text-cyan'>{urlHistory.shortUrl}</p>
             <CopyToClipboard onCopy={onCopy} text={urlHistory.shortUrl}>
               <button 
-                className={`${copied ? 'bg-dark-violet' : 'bg-cyan'} w-[calc(100%-40px)] rounded-md py-3 text-white mx-5 lg:w-20 lg:py-1`}
-                >{copied ? 'Copied!' : 'Copy'}</button>
+                className={'bg-cyan w-[calc(100%-40px)] rounded-md py-3 text-white mx-5 lg:w-20 lg:py-1'}
+                onClick={clicked}
+                >Copy</button>
             </CopyToClipboard>
           </div>
           ))}
