@@ -26,9 +26,9 @@ const Navbar = () => {
         </div>
         <div className='hidden lg:flex grow justify-between items-center text-[0.6rem]'>
           <ul className='text-grayish-violet gap-4 font-bold lg:flex'>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
+            <li className='hover:text-black cursor-pointer'><a>Features</a></li>
+            <li className='hover:text-black cursor-pointer'><a>Pricing</a></li>
+            <li className='hover:text-black cursor-pointer'><a>Resources</a></li>
           </ul>
           <div className='flex gap-4 items-center text-grayish-violet'>
             <h1 className='font-bold'>Login</h1>

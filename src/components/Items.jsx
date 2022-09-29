@@ -15,7 +15,7 @@ const Items = ({isItem, history, handleDelete}) => {
   return (
     <>
       {isItem && (
-        <article className='flex flex-col px-5 pt-40 gap-10 items-center lg:px-12 lg:pt-20 lg:text-sm'>
+        <article className='flex flex-col px-5 pt-40 gap-10 items-center lg:px-12 lg:pt-28 lg:text-sm'>
           {history.map((urlHistory)=>(
             <div className='relative w-full rounded-md bg-white py-5 text-center flex flex-col gap-3 lg:flex-row lg:px-5 lg:py-3 lg:justify-between items-center'>
               <p className='text-black'>
@@ -28,7 +28,7 @@ const Items = ({isItem, history, handleDelete}) => {
               <p className='text-cyan'>{urlHistory.shortUrl}</p>
             <CopyToClipboard onCopy={onCopy} text={urlHistory.shortUrl}>
               <button 
-                className={'bg-cyan w-[calc(100%-40px)] rounded-md py-3 text-white mx-5 lg:w-20 lg:py-1'}
+                className='bg-cyan w-[calc(100%-40px)] rounded-md py-3 text-white mx-5 lg:w-20 lg:py-1'
                 onClick={clicked}
                 >Copy</button>
             </CopyToClipboard>

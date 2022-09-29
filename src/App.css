@@ -15,3 +15,8 @@ body{
     width: 22.5px;
     height: 2.85px;
 }
+
+button:hover{
+    -webkit-backdrop-filter: brightness(125%);
+    backdrop-filter: brightness(125%);
+}
